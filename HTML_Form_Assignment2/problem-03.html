@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>GLA University Course Enrollment</title>
+</head>
+
+<body>
+
+    <h1>GLA University</h1>
+
+    <h2>Course Enrollment Form 2026</h2>
+
+    <p>
+        This form is used by students to select their preferred academic
+        program and provide the information required for course enrollment.
+    </p>
+
+    <p>
+        <mark>Complete all required fields before submitting the form.</mark>
+    </p>
+
+    <hr>
+
+    <h2>Student Information</h2>
+
+    <form action="#" method="post">
+
+        <label for="student_name">
+            Student Name *
+        </label>
+        <br>
+        <input
+            type="text"
+            id="student_name"
+            name="student_name"
+            placeholder="Enter your full name"
+            minlength="3"
+            maxlength="50"
+            required
+        >
+
+        <br><br>
+
+        <label for="student_email">
+            Email Address *
+        </label>
+        <br>
+        <input
+            type="email"
+            id="student_email"
+            name="student_email"
+            placeholder="student@example.com"
+            required
+        >
+
+        <br><br>
+
+        <label for="student_phone">
+            Mobile Number *
+        </label>
+        <br>
+        <input
+            type="tel"
+            id="student_phone"
+            name="student_phone"
+            placeholder="10-digit mobile number"
+            pattern="[0-9]{10}"
+            minlength="10"
+            maxlength="10"
+            required
+        >
+
+        <br><br>
+
+        <label for="student_id">
+            Student ID
+        </label>
+        <br>
+        <input
+            type="text"
+            id="student_id"
+            name="student_id"
+            placeholder="Enter student ID"
+            maxlength="20"
+        >
+
+        <hr>
+
+        <h2>Select Course</h2>
+
+        <label for="course">
+            Preferred Course *
+        </label>
+        <br>
+
+        <select
+            id="course"
+            name="preferred_course"
+            required
+        >
+
+            <option value="">-- Choose a Course --</option>
+
+            <option value="btech_ai_ml">
+                B.Tech Artificial Intelligence & Machine Learning
+            </option>
+
+            <option value="btech_cse">
+                B.Tech Computer Science Engineering
+            </option>
+
+            <option value="btech_ece">
+                B.Tech Electronics & Communication Engineering
+            </option>
+
+            <option value="bca">
+                Bachelor of Computer Applications
+            </option>
+
+            <option value="bba">
+                Bachelor of Business Administration
+            </option>
+
+            <option value="bsc_cs">
+                B.Sc Computer Science
+            </option>
+
+            <option value="mca">
+                Master of Computer Applications
+            </option>
+
+        </select>
+
+        <br><br>
+
+        <h3>Study Preference *</h3>
+
+        <input
+            type="radio"
+            id="full_time"
+            name="study_preference"
+            value="full_time"
+            required
+        >
+        <label for="full_time">Full Time</label>
+
+        <br>
+
+        <input
+            type="radio"
+            id="flexible"
+            name="study_preference"
+            value="flexible"
+        >
+        <label for="flexible">Flexible</label>
+
+        <hr>
+
+        <h2>Academic Details</h2>
+
+        <label for="qualification">
+            Highest Qualification *
+        </label>
+        <br>
+
+        <select
+            id="qualification"
+            name="highest_qualification"
+            required
+        >
+
+            <option value="">-- Select Qualification --</option>
+            <option value="12th">Class 12</option>
+            <option value="diploma">Diploma</option>
+            <option value="graduation">Graduation</option>
+            <option value="post_graduation">Post Graduation</option>
+
+        </select>
+
+        <br><br>
+
+        <label for="marks">
+            Percentage / CGPA *
+        </label>
+        <br>
+
+        <input
+            type="number"
+            id="marks"
+            name="percentage_cgpa"
+            placeholder="Enter percentage"
+            min="0"
+            max="100"
+            step="0.01"
+            required
+        >
+
+        <br><br>
+
+        <label for="passing_year">
+            Passing Year *
+        </label>
+        <br>
+
+        <input
+            type="number"
+            id="passing_year"
+            name="passing_year"
+            min="2015"
+            max="2026"
+            step="1"
+            required
+        >
+
+        <hr>
+
+        <h2>Areas of Interest</h2>
+
+        <p>Select subjects or areas you are interested in:</p>
+
+        <input
+            type="checkbox"
+            id="coding"
+            name="interest_coding"
+            value="coding"
+        >
+        <label for="coding">Programming & Coding</label>
+
+        <br>
+
+        <input
+            type="checkbox"
+            id="artificial_intelligence"
+            name="interest_ai"
+            value="artificial_intelligence"
+        >
+        <label for="artificial_intelligence">Artificial Intelligence</label>
+
+        <br>
+
+        <input
+            type="checkbox"
+            id="data_science"
+            name="interest_data_science"
+            value="data_science"
+        >
+        <label for="data_science">Data Science</label>
+
+        <br>
+
+        <input
+            type="checkbox"
+            id="web_development"
+            name="interest_web"
+            value="web_development"
+        >
+        <label for="web_development">Web Development</label>
+
+        <br>
+
+        <input
+            type="checkbox"
+            id="cyber_security"
+            name="interest_cyber_security"
+            value="cyber_security"
+        >
+        <label for="cyber_security">Cyber Security</label>
+
+        <hr>
+
+        <h2>Additional Information</h2>
+
+        <label for="reason">
+            Why do you want to join this course?
+        </label>
+        <br>
+
+        <textarea
+            id="reason"
+            name="enrollment_reason"
+            rows="6"
+            cols="50"
+            placeholder="Write a short reason..."
+            maxlength="500"
+        ></textarea>
+
+        <br><br>
+
+        <label for="document">
+            Upload Previous Marksheet
+        </label>
+        <br>
+
+        <input
+            type="file"
+            id="document"
+            name="previous_marksheet"
+            accept=".pdf,.jpg,.jpeg,.png"
+        >
+
+        <hr>
+
+        <h2>Student Declaration</h2>
+
+        <input
+            type="checkbox"
+            id="agreement"
+            name="student_agreement"
+            value="accepted"
+            required
+        >
+
+        <label for="agreement">
+            I confirm that the information entered by me is correct
+            and I agree to the course enrollment conditions. *
+        </label>
+
+        <br><br>
+
+        <input
+            type="submit"
+            name="submit_enrollment"
+            value="Enroll in Course"
+        >
+
+        <input
+            type="reset"
+            name="reset_enrollment"
+            value="Reset Form"
+        >
+
+    </form>
+
+    <hr>
+
+    <h2>Course Information</h2>
+
+    <ul>
+        <li>Choose your course carefully before submitting.</li>
+        <li>Check your academic details before enrollment.</li>
+        <li>Use an active email address and mobile number.</li>
+        <li>Keep your academic documents ready.</li>
+        <li>Selected course details should be reviewed before final submission.</li>
+    </ul>
+
+    <hr>
+
+    <h2>Useful Link</h2>
+
+    <p>
+        Visit the
+        <a href="https://www.gla.ac.in/" target="_blank">
+            GLA University Official Website
+        </a>
+        for university information.
+    </p>
+
+    <hr>
+
+    <h2>Student Message</h2>
+
+    <blockquote>
+        "Choose a course according to your interests and academic goals,
+        and make sure that all enrollment information is entered correctly."
+    </blockquote>
+
+    <hr>
+
+    <p>
+        <strong>GLA University — Course Enrollment Portal 2026</strong>
+    </p>
+
+</body>
+
+</html>

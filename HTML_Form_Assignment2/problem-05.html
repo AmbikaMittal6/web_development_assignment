@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>TechCart Online Store - Checkout</title>
+</head>
+
+<body>
+
+    <h1>TechCart</h1>
+
+    <h2>E-Commerce Checkout Form</h2>
+
+    <p>
+        Welcome to TechCart online store. Enter your delivery,
+        contact and payment information to complete your order.
+    </p>
+
+    <p>
+        <mark>Free delivery is available on selected orders above ₹999.</mark>
+    </p>
+
+    <hr>
+
+    <h2>Order Summary</h2>
+
+    <table border="1" cellpadding="8">
+
+        <caption>
+            <strong>Your Selected Products</strong>
+        </caption>
+
+        <tr>
+            <th>Product</th>
+            <th>Category</th>
+            <th>Quantity</th>
+            <th>Price</th>
+        </tr>
+
+        <tr>
+            <td>Wireless Keyboard</td>
+            <td>Computer Accessories</td>
+            <td>1</td>
+            <td>₹899</td>
+        </tr>
+
+        <tr>
+            <td>USB-C Hub</td>
+            <td>Accessories</td>
+            <td>1</td>
+            <td>₹649</td>
+        </tr>
+
+        <tr>
+            <td>Bluetooth Speaker</td>
+            <td>Audio</td>
+            <td>1</td>
+            <td>₹1,299</td>
+        </tr>
+
+    </table>
+
+    <hr>
+
+    <form action="#" method="post">
+
+        <h2>1. Customer Details</h2>
+
+        <label for="customer_name">
+            Full Name *
+        </label>
+        <br>
+
+        <input
+            type="text"
+            id="customer_name"
+            name="customer_name"
+            placeholder="Enter your full name"
+            minlength="3"
+            maxlength="60"
+            required
+            autocomplete="name"
+        >
+
+        <br><br>
+
+        <label for="customer_email">
+            Email Address *
+        </label>
+        <br>
+
+        <input
+            type="email"
+            id="customer_email"
+            name="customer_email"
+            placeholder="example@gmail.com"
+            required
+            autocomplete="email"
+        >
+
+        <br><br>
+
+        <label for="customer_mobile">
+            Mobile Number *
+        </label>
+        <br>
+
+        <input
+            type="tel"
+            id="customer_mobile"
+            name="customer_mobile"
+            placeholder="10-digit mobile number"
+            pattern="[0-9]{10}"
+            minlength="10"
+            maxlength="10"
+            required
+            autocomplete="tel"
+        >
+
+        <hr>
+
+        <h2>2. Delivery Address</h2>
+
+        <label for="house_address">
+            House / Flat / Street Address *
+        </label>
+        <br>
+
+        <textarea
+            id="house_address"
+            name="delivery_address"
+            rows="5"
+            cols="50"
+            placeholder="Enter your complete delivery address"
+            minlength="10"
+            maxlength="250"
+            required
+            autocomplete="street-address"
+        ></textarea>
+
+        <br><br>
+
+        <label for="city">
+            City *
+        </label>
+        <br>
+
+        <input
+            type="text"
+            id="city"
+            name="city"
+            placeholder="Enter city"
+            minlength="2"
+            maxlength="40"
+            required
+            autocomplete="address-level2"
+        >
+
+        <br><br>
+
+        <label for="state">
+            State *
+        </label>
+        <br>
+
+        <select
+            id="state"
+            name="state"
+            required
+            autocomplete="address-level1"
+        >
+
+            <option value="">-- Select State --</option>
+            <option value="uttar_pradesh">Uttar Pradesh</option>
+            <option value="haryana">Haryana</option>
+            <option value="delhi">Delhi</option>
+            <option value="rajasthan">Rajasthan</option>
+            <option value="punjab">Punjab</option>
+            <option value="uttarakhand">Uttarakhand</option>
+            <option value="madhya_pradesh">Madhya Pradesh</option>
+            <option value="maharashtra">Maharashtra</option>
+
+        </select>
+
+        <br><br>
+
+        <label for="pincode">
+            PIN Code *
+        </label>
+        <br>
+
+        <input
+            type="text"
+            id="pincode"
+            name="postal_code"
+            placeholder="6-digit PIN code"
+            pattern="[0-9]{6}"
+            minlength="6"
+            maxlength="6"
+            required
+            autocomplete="postal-code"
+        >
+
+        <hr>
+
+        <h2>3. Delivery Preference</h2>
+
+        <input
+            type="radio"
+            id="standard_delivery"
+            name="delivery_method"
+            value="standard"
+            required
+        >
+        <label for="standard_delivery">
+            Standard Delivery
+        </label>
+
+        <br>
+
+        <input
+            type="radio"
+            id="express_delivery"
+            name="delivery_method"
+            value="express"
+        >
+        <label for="express_delivery">
+            Express Delivery
+        </label>
+
+        <br><br>
+
+        <label for="delivery_date">
+            Preferred Delivery Date
+        </label>
+        <br>
+
+        <input
+            type="date"
+            id="delivery_date"
+            name="preferred_delivery_date"
+            min="2026-09-01"
+            max="2026-12-31"
+        >
+
+        <hr>
+
+        <h2>4. Payment Method</h2>
+
+        <p>
+            Select one payment option:
+        </p>
+
+        <input
+            type="radio"
+            id="upi"
+            name="payment_method"
+            value="upi"
+            required
+        >
+        <label for="upi">UPI</label>
+
+        <br>
+
+        <input
+            type="radio"
+            id="card"
+            name="payment_method"
+            value="card"
+        >
+        <label for="card">Debit / Credit Card</label>
+
+        <br>
+
+        <input
+            type="radio"
+            id="cod"
+            name="payment_method"
+            value="cash_on_delivery"
+        >
+        <label for="cod">Cash on Delivery</label>
+
+        <br>
+
+        <input
+            type="radio"
+            id="net_banking"
+            name="payment_method"
+            value="net_banking"
+        >
+        <label for="net_banking">Net Banking</label>
+
+        <hr>
+
+        <h2>5. Order Preferences</h2>
+
+        <p>
+            Select any additional preferences:
+        </p>
+
+        <input
+            type="checkbox"
+            id="gift_wrap"
+            name="gift_wrap"
+            value="yes"
+        >
+        <label for="gift_wrap">
+            Gift Wrapping
+        </label>
+
+        <br>
+
+        <input
+            type="checkbox"
+            id="invoice"
+            name="invoice_required"
+            value="yes"
+        >
+        <label for="invoice">
+            Send Printed Invoice
+        </label>
+
+        <br>
+
+        <input
+            type="checkbox"
+            id="delivery_call"
+            name="delivery_call"
+            value="yes"
+        >
+        <label for="delivery_call">
+            Call Before Delivery
+        </label>
+
+        <br>
+
+        <input
+            type="checkbox"
+            id="eco_packaging"
+            name="eco_packaging"
+            value="yes"
+        >
+        <label for="eco_packaging">
+            Eco-Friendly Packaging
+        </label>
+
+        <hr>
+
+        <h2>6. Order Notes</h2>
+
+        <label for="order_notes">
+            Additional Delivery Instructions
+        </label>
+        <br>
+
+        <textarea
+            id="order_notes"
+            name="order_notes"
+            rows="5"
+            cols="50"
+            placeholder="Example: Leave the parcel with the security desk..."
+            maxlength="300"
+        ></textarea>
+
+        <hr>
+
+        <h2>7. Customer Agreement</h2>
+
+        <input
+            type="checkbox"
+            id="terms"
+            name="terms_and_conditions"
+            value="accepted"
+            required
+        >
+
+        <label for="terms">
+            I confirm that the delivery and contact information provided
+            by me is correct and I agree to the store's terms and conditions. *
+        </label>
+
+        <br><br>
+
+        <input
+            type="submit"
+            name="place_order"
+            value="Place Order"
+        >
+
+        <input
+            type="reset"
+            name="reset_checkout"
+            value="Reset Form"
+        >
+
+    </form>
+
+    <hr>
+
+    <h2>Payment Information</h2>
+
+    <ul>
+        <li>Choose your preferred payment method.</li>
+        <li>Check your delivery address before placing the order.</li>
+        <li>Enter a valid mobile number for delivery updates.</li>
+        <li>Keep your order details safe.</li>
+        <li>Never share your payment PIN or password with anyone.</li>
+    </ul>
+
+    <hr>
+
+    <h2>TechCart Help</h2>
+
+    <p>
+        For general store information, visit:
+        <a href="https://www.amazon.in/" target="_blank">
+            Online Shopping Reference
+        </a>
+    </p>
+
+    <p>
+        <strong>Customer Support:</strong>
+        support@techcart.example
+    </p>
+
+    <p>
+        <strong>Support Hours:</strong>
+        Monday to Saturday, 9:00 AM - 6:00 PM
+    </p>
+
+    <hr>
+
+    <blockquote>
+        "Please review your order and delivery details carefully before
+        placing the final order."
+    </blockquote>
+
+    <hr>
+
+    <p>
+        <strong>TechCart — Online Shopping Portal 2026</strong>
+    </p>
+
+</body>
+
+</html>

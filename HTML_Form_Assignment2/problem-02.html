@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Sunrise Care Clinic - Appointment Booking</title>
+</head>
+
+<body>
+
+    <h1>Sunrise Care Clinic</h1>
+
+    <h2>Online Appointment Booking</h2>
+
+    <p>
+        Welcome to Sunrise Care Clinic. Use this appointment form to
+        request a consultation with one of our doctors. Please provide
+        accurate information so that the clinic can process your request.
+    </p>
+
+    <p>
+        <mark>Appointment requests should be submitted at least one day in advance.</mark>
+    </p>
+
+    <hr>
+
+    <h2>About Our Clinic</h2>
+
+    <p>
+        Sunrise Care Clinic provides general consultation and specialist
+        healthcare services. Patients can select a suitable doctor,
+        appointment time and preferred communication method.
+    </p>
+
+    <img
+        src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=800&q=80"
+        alt="Clinic interior"
+        width="500"
+        height="300"
+    >
+
+    <hr>
+
+    <form action="#" method="post">
+
+        <h2>1. Patient Information</h2>
+
+        <label for="patient_name">
+            Patient Name *
+        </label>
+        <br>
+
+        <input
+            type="text"
+            id="patient_name"
+            name="patient_name"
+            placeholder="Enter patient's full name"
+            minlength="3"
+            maxlength="60"
+            required
+            autocomplete="name"
+        >
+
+        <br><br>
+
+        <label for="patient_email">
+            Email Address *
+        </label>
+        <br>
+
+        <input
+            type="email"
+            id="patient_email"
+            name="patient_email"
+            placeholder="example@gmail.com"
+            required
+            autocomplete="email"
+        >
+
+        <br><br>
+
+        <label for="patient_mobile">
+            Mobile Number *
+        </label>
+        <br>
+
+        <input
+            type="tel"
+            id="patient_mobile"
+            name="patient_mobile"
+            placeholder="10-digit mobile number"
+            pattern="[0-9]{10}"
+            minlength="10"
+            maxlength="10"
+            required
+            autocomplete="tel"
+        >
+
+        <br><br>
+
+        <label for="birth_date">
+            Date of Birth *
+        </label>
+        <br>
+
+        <input
+            type="date"
+            id="birth_date"
+            name="date_of_birth"
+            min="1920-01-01"
+            max="2026-12-31"
+            required
+        >
+
+        <br><br>
+
+        <label for="patient_id">
+            Patient ID
+        </label>
+        <br>
+
+        <input
+            type="text"
+            id="patient_id"
+            name="patient_id"
+            placeholder="Enter ID if you are an existing patient"
+            maxlength="20"
+        >
+
+        <hr>
+
+        <h2>2. Appointment Details</h2>
+
+        <label for="doctor">
+            Select Doctor *
+        </label>
+        <br>
+
+        <select
+            id="doctor"
+            name="doctor_selection"
+            required
+        >
+
+            <option value="">-- Select a Doctor --</option>
+
+            <option value="dr_aarav_mehta">
+                Dr. Aarav Mehta - General Physician
+            </option>
+
+            <option value="dr_nisha_verma">
+                Dr. Nisha Verma - Dermatologist
+            </option>
+
+            <option value="dr_rohan_kapoor">
+                Dr. Rohan Kapoor - Cardiologist
+            </option>
+
+            <option value="dr_isha_malhotra">
+                Dr. Isha Malhotra - Pediatrician
+            </option>
+
+            <option value="dr_vikram_sen">
+                Dr. Vikram Sen - Orthopedic Specialist
+            </option>
+
+            <option value="dr_meera_jain">
+                Dr. Meera Jain - Nutrition Specialist
+            </option>
+
+        </select>
+
+        <br><br>
+
+        <label for="appointment_date">
+            Preferred Appointment Date *
+        </label>
+        <br>
+
+        <input
+            type="date"
+            id="appointment_date"
+            name="appointment_date"
+            min="2026-09-01"
+            max="2026-12-31"
+            required
+        >
+
+        <br><br>
+
+        <label for="appointment_time">
+            Preferred Appointment Time *
+        </label>
+        <br>
+
+        <input
+            type="time"
+            id="appointment_time"
+            name="appointment_time"
+            min="09:00"
+            max="18:00"
+            required
+        >
+
+        <hr>
+
+        <h2>3. Type of Visit</h2>
+
+        <p>
+            Select one appointment type:
+        </p>
+
+        <input
+            type="radio"
+            id="new_patient"
+            name="visit_type"
+            value="new_patient"
+            required
+        >
+        <label for="new_patient">New Patient</label>
+
+        <br>
+
+        <input
+            type="radio"
+            id="follow_up"
+            name="visit_type"
+            value="follow_up"
+        >
+        <label for="follow_up">Follow-up</label>
+
+        <br>
+
+        <input
+            type="radio"
+            id="consultation"
+            name="visit_type"
+            value="consultation"
+        >
+        <label for="consultation">Consultation</label>
+
+        <br>
+
+        <input
+            type="radio"
+            id="emergency"
+            name="visit_type"
+            value="emergency"
+        >
+        <label for="emergency">Emergency</label>
+
+        <hr>
+
+        <h2>4. Preferred Communication Method</h2>
+
+        <p>
+            How should the clinic contact you?
+        </p>
+
+        <input
+            type="radio"
+            id="communication_phone"
+            name="communication_method"
+            value="phone"
+            required
+        >
+        <label for="communication_phone">Phone Call</label>
+
+        <br>
+
+        <input
+            type="radio"
+            id="communication_email"
+            name="communication_method"
+            value="email"
+        >
+        <label for="communication_email">Email</label>
+
+        <br>
+
+        <input
+            type="radio"
+            id="communication_sms"
+            name="communication_method"
+            value="sms"
+        >
+        <label for="communication_sms">SMS</label>
+
+        <hr>
+
+        <h2>5. Visit Information</h2>
+
+        <label for="visit_reason">
+            Reason for Visit / Additional Information *
+        </label>
+        <br>
+
+        <textarea
+            id="visit_reason"
+            name="visit_reason"
+            rows="6"
+            cols="50"
+            placeholder="Briefly describe the reason for your appointment..."
+            minlength="10"
+            maxlength="500"
+            required
+        ></textarea>
+
+        <hr>
+
+        <h2>6. Appointment Terms</h2>
+
+        <p>
+            Please confirm that the information entered in this form
+            is accurate.
+        </p>
+
+        <input
+            type="checkbox"
+            id="appointment_terms"
+            name="appointment_terms"
+            value="accepted"
+            required
+        >
+
+        <label for="appointment_terms">
+            I confirm that the information provided is correct and
+            I agree to the clinic appointment terms. *
+        </label>
+
+        <br><br>
+
+        <input
+            type="submit"
+            name="book_appointment"
+            value="Request Appointment"
+        >
+
+        <input
+            type="reset"
+            name="reset_form"
+            value="Reset Form"
+        >
+
+    </form>
+
+    <hr>
+
+    <h2>Clinic Timings</h2>
+
+    <table border="1" cellpadding="8">
+
+        <caption>
+            <strong>Weekly Clinic Schedule</strong>
+        </caption>
+
+        <tr>
+            <th>Day</th>
+            <th>Morning</th>
+            <th>Afternoon</th>
+            <th>Evening</th>
+        </tr>
+
+        <tr>
+            <td>Monday</td>
+            <td>9:00 AM - 12:00 PM</td>
+            <td>2:00 PM - 4:00 PM</td>
+            <td>5:00 PM - 7:00 PM</td>
+        </tr>
+
+        <tr>
+            <td>Tuesday</td>
+            <td>9:00 AM - 12:00 PM</td>
+            <td>2:00 PM - 4:00 PM</td>
+            <td>5:00 PM - 7:00 PM</td>
+        </tr>
+
+        <tr>
+            <td>Wednesday</td>
+            <td>9:00 AM - 12:00 PM</td>
+            <td>2:00 PM - 4:00 PM</td>
+            <td>5:00 PM - 7:00 PM</td>
+        </tr>
+
+        <tr>
+            <td>Thursday</td>
+            <td>9:00 AM - 12:00 PM</td>
+            <td>2:00 PM - 4:00 PM</td>
+            <td>5:00 PM - 7:00 PM</td>
+        </tr>
+
+        <tr>
+            <td>Friday</td>
+            <td>9:00 AM - 12:00 PM</td>
+            <td>2:00 PM - 4:00 PM</td>
+            <td>5:00 PM - 7:00 PM</td>
+        </tr>
+
+        <tr>
+            <td>Saturday</td>
+            <td>10:00 AM - 1:00 PM</td>
+            <td>2:00 PM - 4:00 PM</td>
+            <td>Closed</td>
+        </tr>
+
+    </table>
+
+    <hr>
+
+    <h2>Important Patient Instructions</h2>
+
+    <ul>
+        <li>Carry your previous medical reports if available.</li>
+        <li>Arrive at the clinic at least 15 minutes before your appointment.</li>
+        <li>Keep your patient ID available if you are an existing patient.</li>
+        <li>Provide accurate contact information.</li>
+        <li>Appointment requests are subject to doctor availability.</li>
+    </ul>
+
+    <hr>
+
+    <h2>Emergency Contact</h2>
+
+    <p>
+        For a serious medical emergency, contact your local emergency
+        service immediately rather than waiting for an online appointment.
+    </p>
+
+    <p>
+        <a href="https://www.bing.com/ck/a?!&&p=0195007b1bc22fc6582469bc03e930fd58c1ca55749984885924a59004b5ac58JmltdHM9MTc4ODEzNDQwMA&ptn=3&ver=2&hsh=4&fclid=241aeca3-8fd0-62d6-3913-fb1b8e6863c5&psq=call+emergency+services+112+link&u=a1aHR0cHM6Ly8xMTIudXAuZ292LmluL2l0ZWNjcw">
+            Call Emergency Services: 112
+        </a>
+    </p>
+
+    <hr>
+
+    <h2>Clinic Contact</h2>
+
+    <p>
+        <strong>Clinic:</strong> Sunrise Care Clinic
+    </p>
+
+    <p>
+        <strong>Email:</strong> sunriseclinic@example.com
+    </p>
+
+    <p>
+        <strong>Reception:</strong> +91 87654 21098
+    </p>
+
+    <hr>
+
+    <blockquote>
+        "Please provide complete and accurate information so that our
+        clinic team can process your appointment request efficiently."
+    </blockquote>
+
+    <hr>
+
+    <p>
+        <strong>Sunrise Care Clinic — Online Appointment Portal 2026</strong>
+    </p>
+
+</body>
+
+</html>

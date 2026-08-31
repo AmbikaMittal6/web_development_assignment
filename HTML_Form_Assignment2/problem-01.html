@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>GLA University Admission Form</title>
+</head>
+
+<body>
+
+    <h1>GLA University</h1>
+
+    <h2>College Admission Application Form 2026</h2>
+
+    <p>
+        Welcome to the GLA University admission application form.
+        Please enter your personal, academic and course details carefully.
+        Fields marked with * are mandatory.
+    </p>
+
+    <p>
+        <mark>Application Deadline: 20 July 2026</mark>
+    </p>
+
+    <hr>
+
+    <h2>About GLA University</h2>
+
+    <p>
+        GLA University provides undergraduate and postgraduate programs
+        in different areas of education and technology. Students can
+        use this form to submit their basic admission information.
+    </p>
+
+    <img
+        src="https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=800&q=80"
+        alt="University campus"
+        width="500"
+        height="300"
+    >
+
+    <hr>
+
+    <form action="#" method="post">
+
+        <h2>1. Personal Information</h2>
+
+        <label for="fullname">
+            Full Name *
+        </label>
+        <br>
+        <input
+            type="text"
+            id="fullname"
+            name="full_name"
+            placeholder="Enter your full name"
+            minlength="3"
+            maxlength="50"
+            required
+            autocomplete="name"
+        >
+        <br><br>
+
+        <label for="dob">
+            Date of Birth *
+        </label>
+        <br>
+        <input
+            type="date"
+            id="dob"
+            name="date_of_birth"
+            min="2000-01-01"
+            max="2010-12-31"
+            required
+        >
+        <br><br>
+
+        <label for="email">
+            Email Address *
+        </label>
+        <br>
+        <input
+            type="email"
+            id="email"
+            name="email_address"
+            placeholder="example@gmail.com"
+            required
+            autocomplete="email"
+        >
+        <br><br>
+
+        <label for="mobile">
+            Mobile Number *
+        </label>
+        <br>
+        <input
+            type="tel"
+            id="mobile"
+            name="mobile_number"
+            placeholder="10-digit mobile number"
+            pattern="[0-9]{10}"
+            maxlength="10"
+            minlength="10"
+            required
+            autocomplete="tel"
+        >
+        <br><br>
+
+        <label for="application_pin">
+            Application PIN *
+        </label>
+        <br>
+        <input
+            type="password"
+            id="application_pin"
+            name="application_pin"
+            placeholder="Create a 6-digit PIN"
+            pattern="[0-9]{6}"
+            minlength="6"
+            maxlength="6"
+            required
+        >
+        <br><br>
+
+        <h3>Gender *</h3>
+
+        <input
+            type="radio"
+            id="male"
+            name="gender"
+            value="male"
+            required
+        >
+        <label for="male">Male</label>
+
+        <br>
+
+        <input
+            type="radio"
+            id="female"
+            name="gender"
+            value="female"
+        >
+        <label for="female">Female</label>
+
+        <br>
+
+        <input
+            type="radio"
+            id="other_gender"
+            name="gender"
+            value="other"
+        >
+        <label for="other_gender">Other</label>
+
+        <h3>Category *</h3>
+
+        <label for="category">
+            Select Category:
+        </label>
+        <br>
+
+        <select
+            id="category"
+            name="category"
+            required
+        >
+            <option value="">-- Select Category --</option>
+            <option value="general">General</option>
+            <option value="ews">EWS</option>
+            <option value="obc">OBC</option>
+            <option value="sc">SC</option>
+            <option value="st">ST</option>
+        </select>
+
+        <br><br>
+
+        <label for="address">
+            Permanent Address *
+        </label>
+        <br>
+
+        <textarea
+            id="address"
+            name="permanent_address"
+            rows="5"
+            cols="45"
+            placeholder="Enter your complete permanent address"
+            minlength="10"
+            maxlength="250"
+            required
+        ></textarea>
+
+        <hr>
+
+        <h2>2. Course Information</h2>
+
+        <label for="course">
+            Select Program *
+        </label>
+        <br>
+
+        <select
+            id="course"
+            name="selected_course"
+            required
+        >
+            <option value="">-- Select a Course --</option>
+            <option value="btech_ai_ml">B.Tech Artificial Intelligence & Machine Learning</option>
+            <option value="btech_cse">B.Tech Computer Science Engineering</option>
+            <option value="btech_ece">B.Tech Electronics & Communication</option>
+            <option value="bca">Bachelor of Computer Applications</option>
+            <option value="bba">Bachelor of Business Administration</option>
+            <option value="bsc_cs">B.Sc Computer Science</option>
+            <option value="mca">Master of Computer Applications</option>
+        </select>
+
+        <br><br>
+
+        <h3>Preferred Study Mode *</h3>
+
+        <input
+            type="radio"
+            id="regular"
+            name="study_mode"
+            value="regular"
+            required
+        >
+        <label for="regular">Regular</label>
+
+        <br>
+
+        <input
+            type="radio"
+            id="weekend"
+            name="study_mode"
+            value="weekend"
+        >
+        <label for="weekend">Weekend / Flexible</label>
+
+        <h3>Areas of Interest</h3>
+
+        <input
+            type="checkbox"
+            id="programming"
+            name="interest_programming"
+            value="programming"
+        >
+        <label for="programming">Programming</label>
+
+        <br>
+
+        <input
+            type="checkbox"
+            id="ai"
+            name="interest_ai"
+            value="artificial_intelligence"
+        >
+        <label for="ai">Artificial Intelligence</label>
+
+        <br>
+
+        <input
+            type="checkbox"
+            id="web"
+            name="interest_web"
+            value="web_development"
+        >
+        <label for="web">Web Development</label>
+
+        <br>
+
+        <input
+            type="checkbox"
+            id="data"
+            name="interest_data"
+            value="data_science"
+        >
+        <label for="data">Data Science</label>
+
+        <hr>
+
+        <h2>3. Previous Qualification</h2>
+
+        <label for="qualification">
+            Previous Qualification *
+        </label>
+        <br>
+
+        <select
+            id="qualification"
+            name="previous_qualification"
+            required
+        >
+            <option value="">-- Select Qualification --</option>
+            <option value="12th">Class 12 / Senior Secondary</option>
+            <option value="diploma">Diploma</option>
+            <option value="graduation">Graduation</option>
+            <option value="other">Other</option>
+        </select>
+
+        <br><br>
+
+        <label for="percentage">
+            Percentage / CGPA *
+        </label>
+        <br>
+
+        <input
+            type="number"
+            id="percentage"
+            name="percentage_cgpa"
+            placeholder="Enter percentage"
+            min="0"
+            max="100"
+            step="0.01"
+            required
+        >
+
+        <br><br>
+
+        <label for="passing_year">
+            Passing Year *
+        </label>
+        <br>
+
+        <input
+            type="number"
+            id="passing_year"
+            name="passing_year"
+            min="2015"
+            max="2026"
+            step="1"
+            required
+        >
+
+        <br><br>
+
+        <label for="school_name">
+            School / College Name *
+        </label>
+        <br>
+
+        <input
+            type="text"
+            id="school_name"
+            name="previous_institution"
+            placeholder="Enter previous school or college"
+            minlength="3"
+            maxlength="100"
+            required
+        >
+
+        <hr>
+
+        <h2>4. Admission Document</h2>
+
+        <p>
+            Upload your previous qualification document.
+        </p>
+
+        <label for="document">
+            Upload Marksheet / Certificate *
+        </label>
+        <br>
+
+        <input
+            type="file"
+            id="document"
+            name="admission_document"
+            accept=".pdf,.jpg,.jpeg,.png"
+            required
+        >
+
+        <hr>
+
+        <h2>5. Declaration</h2>
+
+        <p>
+            I declare that the information provided by me in this
+            application form is correct to the best of my knowledge.
+        </p>
+
+        <input
+            type="checkbox"
+            id="declaration"
+            name="declaration_consent"
+            value="accepted"
+            required
+        >
+
+        <label for="declaration">
+            I agree to the declaration and confirm that the information
+            provided above is correct. *
+        </label>
+
+        <br><br>
+
+        <input
+            type="submit"
+            name="submit_application"
+            value="Submit Application"
+        >
+
+        <input
+            type="reset"
+            name="reset_application"
+            value="Reset Form"
+        >
+
+    </form>
+
+    <hr>
+
+    <h2>Important Information</h2>
+
+    <ul>
+        <li>Enter your details carefully before submitting.</li>
+        <li>Use a valid email address and mobile number.</li>
+        <li>Keep your academic documents ready.</li>
+        <li>Check the selected course before submission.</li>
+        <li>Do not share your application PIN with anyone.</li>
+    </ul>
+
+    <p>
+        Visit the
+        <a href="https://www.gla.ac.in/" target="_blank">
+            GLA University Official Website
+        </a>
+        for more information.
+    </p>
+
+    <hr>
+
+    <blockquote>
+        "Applicants should carefully review all information and documents
+        before submitting their admission application."
+    </blockquote>
+
+    <hr>
+
+    <p>
+        <strong>GLA University — Admission Application Portal 2026</strong>
+    </p>
+
+</body>
+
+</html>
