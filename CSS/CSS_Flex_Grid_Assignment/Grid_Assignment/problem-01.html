@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hiring Partners Grid</title>
+  <style>
+    /* Reset & Base Styles */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background-color: #f8f9fa;
+      padding: 60px 20px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .container {
+      max-width: 1100px;
+      width: 100%;
+      text-align: center;
+    }
+
+    /* Subheading & Main Heading */
+    .sub-heading {
+      font-size: 0.95rem;
+      color: #555555;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .main-heading {
+      font-size: 1.75rem;
+      color: #222222;
+      font-weight: 800;
+      margin-bottom: 40px;
+    }
+
+    /* CSS Grid Layout (8 columns per row for large screens) */
+    .partners-grid {
+      display: grid;
+      grid-template-columns: repeat(8, 1fr);
+      gap: 15px;
+      margin-bottom: 35px;
+    }
+
+    /* Partner Card Styling */
+    .partner-card {
+      background-color: #ffffff;
+      border-radius: 8px;
+      height: 90px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 15px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .partner-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    .partner-card img {
+      max-width: 100%;
+      max-height: 45px;
+      object-fit: contain;
+    }
+
+    /* Button Styling */
+    .see-more-btn {
+      display: inline-block;
+      border: 1px solid #d1d5db;
+      background-color: #ffffff;
+      padding: 10px 20px;
+      border-radius: 6px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: #ee4343;
+      text-decoration: none;
+      letter-spacing: 0.5px;
+      transition: all 0.2s ease;
+    }
+
+    .see-more-btn:hover {
+      background-color: #fff5f5;
+      border-color: #ee4343;
+    }
+
+    /* Media Queries for Responsiveness */
+
+    /* Medium screens: 4 columns */
+    @media (max-width: 992px) {
+      .partners-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+
+    /* Small screens: 2 columns */
+    @media (max-width: 576px) {
+      .partners-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <p class="sub-heading">Have a Dream Company In Mind?</p>
+    <h2 class="main-heading">Meet Our 700+ Hiring Partners</h2>
+
+    <div class="partners-grid">
+      <!-- Row 1 -->
+      <div class="partner-card">
+        <img src="https://masai-website-images.s3.ap-south-1.amazonaws.com/eatfit_32448373b9.svg" alt="Eatfit">
+      </div>
+      <div class="partner-card">
+        <img src="https://masai-website-images.s3.ap-south-1.amazonaws.com/dream11_2901962306.svg" alt="Dream11">
+      </div>
+      <div class="partner-card">
+        <img src="https://masai-website-images.s3.ap-south-1.amazonaws.com/urbanpiper_495447781b.svg" alt="UrbanPiper">
+      </div>
+      <div class="partner-card">
+        <img src="https://masai-website-images.s3.ap-south-1.amazonaws.com/airmeet_beebf7514f.svg" alt="Airmeet">
+      </div>
+      <div class="partner-card">
+        <img src="https://masai-website-images.s3.ap-south-1.amazonaws.com/paytm_32a31f22e8.svg" alt="Paytm">
+      </div>
+      <div class="partner-card">
+        <img src="https://masai-website-images.s3.ap-south-1.amazonaws.com/whitehat_jr_43e6a4b15c.svg" alt="WhiteHat Jr">
+      </div>
+      <div class="partner-card">
+        <img src="https://masai-website-images.s3.ap-south-1.amazonaws.com/bharatpe_94d2e96d9f.svg" alt="BharatPe">
+      </div>
+      <div class="partner-card">
+        <img src="https://masai-website-images.s3.ap-south-1.amazonaws.com/swiggy_624237f374.svg" alt="Swiggy">
+      </div>
+
+      <!-- Row 2 -->
+      <div class="partner-card">
+        <img src="https://masai-website-images.s3.ap-south-1.amazonaws.com/vyapar_22822a10d9.svg" alt="Vyapar">
+      </div>
+      <div class="partner-card">
+        <img src="https://masai-website-images.s3.ap-south-1.amazonaws.com/pagarbook_8716b08064.svg" alt="PagarBook">
+      </div>
+      <div class="partner-card">
+        <img src="https://masai-website-images.s3.ap-south-1.amazonaws.com/smallcase_ddf1f72782.svg" alt="smallcase">
+      </div>
+      <div class="partner-card">
+        <img src="https://masai-website-images.s3.ap-south-1.amazonaws.com/sharechat_e8a2a5f5f4.svg" alt="ShareChat">
+      </div>
+      <div class="partner-card">
+        <img src="https://masai-website-images.s3.ap-south-1.amazonaws.com/ola_28935c1505.svg" alt="OLA">
+      </div>
+      <div class="partner-card">
+        <img src="https://masai-website-images.s3.ap-south-1.amazonaws.com/ibm_92cfc90f23.svg" alt="IBM">
+      </div>
+      <div class="partner-card">
+        <img src="https://masai-website-images.s3.ap-south-1.amazonaws.com/byjus_c98782a1e0.svg" alt="BYJU'S">
+      </div>
+      <div class="partner-card">
+        <img src="https://masai-website-images.s3.ap-south-1.amazonaws.com/ajio_f7ef04252f.svg" alt="AJIO">
+      </div>
+    </div>
+
+    <a href="#" class="see-more-btn">SEE MORE PARTNERS &gt;</a>
+  </div>
+
+</body>
+</html>
