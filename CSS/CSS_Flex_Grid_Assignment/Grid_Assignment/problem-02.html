@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grid Area Layout</title>
+  <style>
+    /* Reset & Base Box Model */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Georgia, serif;
+    }
+
+    body {
+      background-color: #f4f4f4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    /* Grid Container */
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      grid-template-rows: repeat(3, 100px);
+      gap: 15px;
+      width: 100%;
+      max-width: 800px;
+      grid-template-areas:
+        "a a a b b"
+        "c d d d d"
+        "e e e e e";
+    }
+
+    /* Common Card Styles */
+    .card {
+      background-color: #4a4a4a;
+      color: #ffffff;
+      font-size: 1.8rem;
+      border-radius: 8px;
+      padding: 20px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
+
+    /* Assigning Grid Areas */
+    .card-a { grid-area: a; }
+    .card-b { grid-area: b; }
+    .card-c { grid-area: c; }
+    .card-d { grid-area: d; }
+    .card-e { grid-area: e; }
+  </style>
+</head>
+<body>
+
+  <div class="grid-container">
+    <div class="card card-a">A</div>
+    <div class="card card-b">B</div>
+    <div class="card card-c">C</div>
+    <div class="card card-d">D</div>
+    <div class="card card-e">E</div>
+  </div>
+
+</body>
+</html>

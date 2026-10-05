@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Multi-Box Layout</title>
+  <style>
+    /* Reset & Base Box Model */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      padding: 20px;
+      background-color: #f4f4f4;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    /* Navigation Bar */
+    .navigation {
+      background-color: #e2e125; /* Yellow header color */
+      padding: 15px 20px;
+      font-size: 2rem;
+      font-weight: 500;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    /* Default (Large Screen): Left box on left, Right boxes stacked on right */
+    .content-wrapper {
+      display: flex;
+      gap: 20px;
+    }
+
+    .left-box {
+      flex: 3;
+      background-color: #ea3e28; /* Red background */
+      min-height: 380px;
+      padding: 15px;
+      color: #333;
+      font-weight: 500;
+    }
+
+    .right-container {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .right-box {
+      background-color: #2fb52b; /* Green background */
+      flex: 1;
+      min-height: 110px;
+      padding: 15px;
+      color: #333;
+      font-weight: 500;
+    }
+
+    /* --- Media Queries --- */
+
+    /* Medium Screen (e.g., Tablets): Left box top, Right boxes side-by-side below */
+    @media (max-width: 992px) and (min-width: 601px) {
+      .content-wrapper {
+        flex-direction: column;
+      }
+
+      .left-box {
+        min-height: 250px;
+      }
+
+      .right-container {
+        flex-direction: row;
+      }
+
+      .right-box {
+        min-height: 120px;
+      }
+    }
+
+    /* Small Screen (e.g., Mobile): Everything stacked vertically */
+    @media (max-width: 600px) {
+      .content-wrapper {
+        flex-direction: column;
+      }
+
+      .left-box {
+        min-height: 220px;
+      }
+
+      .right-container {
+        flex-direction: column;
+      }
+
+      .right-box {
+        min-height: 120px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <header class="navigation">
+      Navigation
+    </header>
+
+    <main class="content-wrapper">
+      <div class="left-box">
+        LEFT BOX
+      </div>
+
+      <div class="right-container">
+        <div class="right-box">RIGHT BOX 1</div>
+        <div class="right-box">RIGHT BOX 2</div>
+        <div class="right-box">RIGHT BOX 3</div>
+      </div>
+    </main>
+  </div>
+
+</body>
+</html>

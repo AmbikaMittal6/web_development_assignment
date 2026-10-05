@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Layout Assignment</title>
+  <style>
+    /* Reset & CSS Box Model */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      padding: 20px;
+      background-color: #f4f4f4;
+    }
+
+    /* Container */
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    /* Navigation Bar */
+    .navigation {
+      background-color: #e2e125; /* Yellow header color */
+      padding: 15px 20px;
+      font-size: 2rem;
+      font-weight: 500;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    /* Content Area Layout (Flexbox) */
+    .content-wrapper {
+      display: flex;
+      flex-direction: row; /* Default: Side-by-side on Large Screens */
+      gap: 20px;
+    }
+
+    /* Left and Right Boxes */
+    .box {
+      flex: 1; /* Equal width distribution on large screens */
+      height: 350px;
+      padding: 15px;
+      font-size: 1.1rem;
+      color: #333;
+    }
+
+    .left-box {
+      background-color: #ea3e28; /* Red background */
+    }
+
+    .right-box {
+      background-color: #2fb52b; /* Green background */
+    }
+
+    /* --- Media Queries --- */
+
+    /* Small Screens: Stack boxes vertically */
+    @media (max-width: 768px) {
+      .content-wrapper {
+        flex-direction: column; /* Stacked view for small screens */
+      }
+
+      .box {
+        height: 200px; /* Reduced height when stacked */
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <header class="navigation">
+      Navigation
+    </header>
+
+    <main class="content-wrapper">
+      <div class="box left-box">
+        LEFT BOX
+      </div>
+      <div class="box right-box">
+        RIGHT BOX
+      </div>
+    </main>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Deleted and Inserted Text Example</title>
+</head>
+<body>
+
+<h2>Price Update</h2>
+<p>Old price: <del datetime="2026-09-01">$50</del></p>
+<p>New price: <ins datetime="2026-09-15">$40</ins></p>
+
+<h2>Document Changes</h2>
+<p>
+    The meeting will be held on 
+    <del datetime="2026-09-10">Monday</del> 
+    <ins datetime="2026-09-12">Wednesday</ins>.
+</p>
+
+<table border="1">
+<caption>Sample Table</caption>
+<thead>
+<tr>
+<th>Column 1</th>
+<th colspan="2">Column 2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td rowspan="2">Rowspan</td>
+<td>Data A</td>
+<td>Data B</td>
+</tr>
+<tr>
+<td>Data C</td>
+<td>Data D</td>
+</tr>
+</tbody>
+<tfoot>
+<tr>
+<td>Total</td>
+</tr>
+<td colspan="2">100</td>
+</tfoot>
+</table>
+
+</body>
+</html>

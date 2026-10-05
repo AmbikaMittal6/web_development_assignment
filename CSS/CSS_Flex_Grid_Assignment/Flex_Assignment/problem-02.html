@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StudyLab - Online Learning Center</title>
+  <!-- Font Awesome Icons for Feature Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    /* Reset & Base Styles */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: #fafbfc;
+      color: #333333;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* --- Navigation Styles --- */
+    header {
+      background-color: #ffffff;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+      padding: 20px 0;
+    }
+
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      background-color: #6c5ce7;
+      color: #ffffff;
+      font-size: 1.5rem;
+      font-weight: 700;
+      padding: 10px 24px;
+      border-radius: 6px;
+      display: inline-block;
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 30px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #333333;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: color 0.3s;
+    }
+
+    .nav-links a.active,
+    .nav-links a:hover {
+      color: #3b82f6;
+    }
+
+    /* --- Main Section Layout --- */
+    .about-section {
+      padding: 60px 0;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      align-items: start;
+    }
+
+    /* Left Side Content */
+    .subtitle {
+      color: #3b82f6;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 15px;
+    }
+
+    .main-heading {
+      font-size: 2.2rem;
+      color: #222222;
+      line-height: 1.3;
+      font-weight: 700;
+      margin-bottom: 25px;
+    }
+
+    .description {
+      color: #777777;
+      font-size: 0.95rem;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    /* Video Banner Box */
+    .video-box {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      background-color: #ffffff;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+      margin-top: 30px;
+    }
+
+    .video-thumbnail {
+      position: relative;
+      width: 140px;
+      height: 90px;
+      border-radius: 6px;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+
+    .video-thumbnail img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .play-btn {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 32px;
+      height: 32px;
+      background-color: #3b82f6;
+      color: #fff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.8rem;
+    }
+
+    .video-text{
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #333333;
+      line-height: 1.4;
+    }
+
+    /* Right Side 2x2 Feature Grid */
+    .features-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px 30px;
+    }
+
+    .feature-item {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .icon-circle {
+      width: 55px;
+      height: 55px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+      color: #ffffff;
+      margin-bottom: 15px;
+    }
+
+    /* Icon Background Colors */
+    .icon-blue { background-color: #3b82f6; }
+    .icon-pink { background-color: #e84393; }
+    .icon-orange { background-color: #e67e22; }
+    .icon-green { background-color: #00b894; }
+
+    .feature-item h3 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #222222;
+      margin-bottom: 10px;
+    }
+
+    .feature-item p {
+      color: #888888;
+      font-size: 0.88rem;
+      line-height: 1.5;
+    }
+
+    /* --- Responsive Design (Media Queries) --- */
+    @media (max-width: 900px) {
+      .grid-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .nav-container {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .nav-links {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .features-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header>
+    <div class="container nav-container">
+      <div class="logo">StudyLab</div>
+      <ul class="nav-links">
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Course</a></li>
+        <li><a href="#">Instructor</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <section class="about-section">
+    <div class="container grid-container">
+      
+      <!-- Left Column: Heading and Info -->
+      <div class="left-content">
+        <div class="subtitle">WELCOME TO STUDYLAB</div>
+        <h1 class="main-heading">We Are StudyLab An Online Learning Center</h1>
+        
+        <p class="description">
+          A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.
+        </p>
+        
+        <p class="description">
+          Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.
+        </p>
+
+        <!-- Video Box -->
+        <div class="video-box">
+          <div class="video-thumbnail">
+            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=400&q=80" alt="Watch Video">
+            <div class="play-btn"><i class="fa-solid fa-play"></i></div>
+          </div>
+          <div class="video-text">
+            Learn anything from StudyLab,<br>Watch video
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column: 2x2 Features Grid -->
+      <div class="features-grid">
+        <!-- Feature 1 -->
+        <div class="feature-item">
+          <div class="icon-circle icon-blue">
+            <i class="fa-solid fa-book-open"></i>
+          </div>
+          <h3>Top Quality Content</h3>
+          <p>A small river named Duden flows by their place and supplies.</p>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="feature-item">
+          <div class="icon-circle icon-pink">
+            <i class="fa-solid fa-chalkboard-user"></i>
+          </div>
+          <h3>Highly Skilled Instructor</h3>
+          <p>A small river named Duden flows by their place and supplies.</p>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="feature-item">
+          <div class="icon-circle icon-orange">
+            <i class="fa-solid fa-laptop-code"></i>
+          </div>
+          <h3>World Class & Quiz</h3>
+          <p>A small river named Duden flows by their place and supplies.</p>
+        </div>
+
+        <!-- Feature 4 -->
+        <div class="feature-item">
+          <div class="icon-circle icon-green">
+            <i class="fa-solid fa-certificate"></i>
+          </div>
+          <h3>Get Certified</h3>
+          <p>A small river named Duden flows by their place and supplies.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</body>
+</html>

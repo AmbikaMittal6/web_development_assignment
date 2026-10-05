@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <style>
+        *{
+            margin:0px;
+            padding:0px;
+            box-sizing:border-box;
+        }
+
+        body{
+            display:flex;
+            background-color:rgb(239, 228, 228);
+            justify-content:center;
+            align-items:center;
+            min-height:100vh;
+        }
+
+        .container{
+            display:grid;
+            grid-template-columns:repeat(2,1fr);
+            gap:20px;
+            max-height:900px;
+            width:100%
+        }
+
+        .card{ 
+            display:flex;
+            background-color:#f8f8f8;
+            border:1px solid #e0e0e0;
+            border-radius:4px;
+            overflow:hidden;
+            padding: 12px;
+            gap:15px;
+            align-items:center;
+        }
+
+        .card img {
+            width:130px;
+            height:110px;
+            border-radius:2px;
+            object-fit:cover;
+            flex-shrink:0;
+        }
+
+        .details{ 
+            display:flex
+            flex-direction:column;
+            align-items:flex-start;
+            gap:8px;
+        }
+          
+        .details h3{
+            font-size: 16px;
+            font-weight: bold;
+            color:#333;
+        }
+
+        .details p{
+            font-size: 13px;
+            color:#666;
+        }
+
+        .btn{ 
+            background-color: #ff4d4d;
+            color:white;
+            border:none;
+            padding:8px 14px;
+            border-radius:4px;
+            font-size:13px;
+            cursor:pointer;
+            font-weight:bold;
+        }
+
+        .btn:hover{
+            background-color:#e03e3e;
+        }
+
+        @media (max-width:600px){
+            .container {
+                grid-template-columns:1fr;
+            }
+        }
+
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+
+    <div class="card" >
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRydl3BR7A7uFkSHNnpq4dB4vh2JrMYQyVMnvfGzfqKNg&s=10" alt="ET (2022)">
+        <div class="details">
+        <h3>ET (2022)</h3>
+        <p>Releasing on 11March,2022 </p>
+        <button class="btn">Book Tickets</button>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVaHsL8RkCevcwFoxEk8sLdyBkdUX1Uc2hQHZkJ6VVDA&s=10" alt="Jhund">
+        <div class="details">
+            <h3>Jhund</h3>
+            <p>Releasing on 11 March,2022 </p>
+            <button class="btn">Book Tickets</button>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ322xntSMYraDnU8SRTd6XpoSvEsqrCM7snyKcqpuHuw&s=10" alt="Gangubai kathiawadi">
+        <div class="details">
+            <h3>GAngubai KAthiawadi</h3>
+            <p>Releasing on 11 March 2022</p>
+            <button class="btn">Book Tickets</button>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYzRZqQ9g4ZWsL91uwY3AqIQcOnqXTW60DRrO1B2yt4A&s=10" alt="Radhe Shyam">
+        <div class="details">
+            <h3> Radhe Shyam</h3>
+            <p> Releasing on 11 march 2022</p>
+            <button class="btn">Book Tickets</button>
+        </div>
+    </div> 
+
+
+    <div class="conatiner">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSznXtoBl2g6rp2OXS-DfN3Y2cnlJrrodJlR9gAiqP2rA&s" alt="Uncharted">
+        <div class="details">
+        <h3>Uncharted</h3>
+        <p>Releasing on 11 March 2022</p>
+        <button class="btn" > Book Tickets</button>
+        </div>
+    </div>    
+
+
+    <div class="card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDNm2F8eOiYWRAl7jcbwTVU6_12NkyLwTCfTgYIvv0KA&s=10" alt="The Batman">
+        <div class="Details">
+        <h3> The Batman</h3>
+        <p> Releasing on 11 March 2022</p>
+        <button class="btn">Book tickets</button>
+        </div>
+    </div>
+
+    </div>
+</body>
+</html>
